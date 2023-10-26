@@ -8,6 +8,6 @@ const z = parseInt(0.21)
 const costo = parseFloat(km * z)
 
 if ( eta < x) {
-const prezzo = parsefloat(costo - 20%)
-document.getElementById("message").innerHTML= prezzo
+ prezzo = parsefloat(costo -(costo * 0.2))
 } 
+document.getElementById("message")innerHTML = prezzo
