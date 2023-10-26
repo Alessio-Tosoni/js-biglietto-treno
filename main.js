@@ -3,11 +3,17 @@ let eta = parseInt(prompt("inserisci la tua età"))
 
 const x = parseInt(18)
 const y = parseInt(65)
-const z = parseInt(0.21)
+const z = parseFloat(0.21)
 
-const costo = parseFloat(km * z)
+const prezzo = parseFloat(km * z)
 
 if ( eta < x) {
- prezzo = parsefloat(costo -(costo * 0.2))
-} 
-document.getElementById("message")innerHTML = prezzo
+    prezzoScontato = parseFloat(prezzo -(prezzo * 0.2)).toFixed(2)
+    document.getElementById("message").innerHTML= prezzoScontato
+} else if(eta > 65){
+    prezzoScontato = parseFloat(prezzo -(prezzo * 0.4)).toFixed(2)
+    document.getElementById("message").innerHTML= prezzoScontato
+} else{
+    prezzoScontato = parseFloat(prezzo).toFixed(2)
+    document.getElementById("message").innerHTML= prezzo
+}
